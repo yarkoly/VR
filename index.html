@@ -30,11 +30,26 @@
 
 
 <!-- Scene itself -->
-<a-scene vr-mode-ui="enabled: true">
+<a-scene vr-mode-ui="enabled: false">
 
+    <a-entity light="color: #white; intensity: 1" position="-1 5 3"></a-entity>
+  
+  <a-entity light="color: #white; intensity: 0.8" position="3 5 3"></a-entity>
+  
+  <a-entity light="color: #white; intensity: 0.4" position="-5 5 -5"></a-entity>
+    
+  
       <a-assets>
         
-        <a-asset-item id="shape-head" src="https://raw.githubusercontent.com/PavelLaptev/test-rep/master/AR-Framer-meetup/3d-models/london/framer-model-renew.obj"></a-asset-item>
+        
+        
+        
+        <a-asset-item id="head-1" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape.obj?1530962595586"></a-asset-item>
+        
+        <a-asset-item id="head-2" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fshape_2.obj?1530962593475"></a-asset-item>
+        
+        
+        
         
         <img id="back" crossorigin="anonymous" src="https://cdn.glitch.com/520ac8dc-bcfe-4a1d-948d-189871611a80%2Fpanorama.jpg?1531009322517">
 
@@ -58,6 +73,7 @@
 <a-entity geometry="primitive: box; width: 1; height: 1; depth: 1"></a-entity>
 
 
+      
 
         <!-- Image link template to be reused. -->
         
@@ -116,9 +132,9 @@
   
   
 
-
       <!--  Enter image -->
   
+      
   
       <a-entity id="enter-group" rotation="0 -180 0" position="0 0 3">
      
@@ -143,9 +159,21 @@
   
 
 
-      <!-- Image links. -->
+      <!-- Image links. --> 
+  <a-entity id="head-1" material="color: white;" rotation="10 90 0" side="double" position="-2 -0.5 0" scale="0.5 0.5 0.5" obj-model="obj: #head-1;">
+    
+    </a-entity>
   
+  
+   <a-entity id="head-2" material="color: white;" rotation="10 -90 0" side="double" position="2 -0.5 0" scale="0.5 0.5 0.5" obj-model="obj: #head-2;">
+    
+    </a-entity>
+  
+  
+
       <a-entity id="links" layout="type: line; margin: 2" rotation="0 180 0" position="0 10 0">
+        
+        
 
         <a-entity rotation="0 30 0" position="0 0 0" template="src: #link" data-thumb="#tuts-thumb"></a-entity>
         
